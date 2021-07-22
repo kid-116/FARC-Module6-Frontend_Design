@@ -1,0 +1,205 @@
+/* 
+  ====================
+  Reset
+  ====================
+*/
+/* 
+  http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a:link, a:visited {
+  text-decoration: none;
+}
+
+
+/* 
+  ====================
+  Colors
+  ====================
+*/
+
+:root {
+  --ablue: #0466c8;
+  --bblue: #0353a4;
+  --cblue: #023e7d;
+  --dblue: #002855;
+  --eblue: #001845;
+  --black: #001233;
+  --agrey: #979dac;
+  --bgrey: #7d8597;
+  --cgrey: #5c677d;
+  --dgrey: #33415c;
+  --white: #fff;
+}
+
+
+/* 
+  ====================
+  Calculator
+  ====================
+*/
+
+#memory {
+  background: var(--dgrey);
+  padding: 10px;
+  color: var(--white);
+  font-size: 30px;
+  width: 500px;
+  box-sizing: border-box;
+}
+
+#input-area textarea {
+  box-sizing: border-box;
+  background: var(--agrey);
+  border: none;
+  border-radius: 0;
+  height: 150px;
+  font-size: 30px;
+  text-align: right;
+  padding: 10px;
+  color: var(--white);
+  width: 500px;
+  resize: none;
+}
+#input-area textarea:focus {
+  outline: none;
+}
+
+#simple-calculator {
+    display: inline-block;
+    width: auto;
+}
+
+#seven {
+    grid-area: seven;
+}
+#eight {
+    grid-area: eight;
+}
+#nine {
+    grid-area: nine;
+}
+#divide {
+    grid-area: divide;
+}
+#clear {
+    grid-area: clr;
+}
+#four {
+    grid-area: four;
+}
+#five {
+    grid-area: five;
+}
+#six {
+    grid-area: six;
+}
+#multiply {
+    grid-area: multiply;
+}
+#delete {
+    grid-area: del;
+}
+#one {
+    grid-area: one;
+}
+#two {
+    grid-area: two;
+}
+#three {
+    grid-area: three;
+}
+#subtract {
+    grid-area: subtract;   
+}
+#decimal {
+    grid-area: dec;
+}
+#zero {
+    grid-area: zero;
+}
+#add {
+    grid-area: add;
+}
+#calc {
+    grid-area: calc;
+}
+
+.empty {
+  grid-area: empty;
+}
+
+#keypad {
+  background: var(--cgrey);
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "seven eight nine divide clr"
+    "four five six multiply del"
+    "one two three subtract ."
+    "dec zero . add calc";
+}
+
+.calc-btn {
+  border: none;
+  color: var(--white);
+  border-radius: 0;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.calc-btn:nth-child(5n+1),
+.calc-btn:nth-child(5n+2),
+.calc-btn:nth-child(5n+3) {
+  background: var(--bgrey);
+}
+
+.calc-btn:nth-child(5n+4),
+.calc-btn:nth-child(5n) {
+  background: var(--cgrey);
+}
