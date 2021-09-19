@@ -91,7 +91,7 @@ a:link, a:visited {
   box-sizing: border-box;
 }
 
-#input-area textarea {
+#input-area {
   box-sizing: border-box;
   background: var(--agrey);
   border: none;
@@ -155,21 +155,23 @@ a:link, a:visited {
 #subtract {
     grid-area: subtract;   
 }
+#mc {
+    grid-area: mc;
+}
 #decimal {
     grid-area: dec;
 }
 #zero {
     grid-area: zero;
 }
+#per {
+    grid-area: per;
+}
 #add {
     grid-area: add;
 }
 #calc {
     grid-area: calc;
-}
-
-.empty {
-  grid-area: empty;
 }
 
 #keypad {
@@ -179,18 +181,8 @@ a:link, a:visited {
   grid-template-areas:
     "seven eight nine divide clr"
     "four five six multiply del"
-    "one two three subtract ."
-    "dec zero . add calc";
-}
-
-.calc-btn {
-  border: none;
-  color: var(--white);
-  border-radius: 0;
-  height: 100px;
-  width: 100px;
-  cursor: pointer;
-  font-size: 35px;
+    "one two three subtract mc"
+    "dec zero per add calc";
 }
 
 .calc-btn:nth-child(5n+1),
@@ -202,4 +194,20 @@ a:link, a:visited {
 .calc-btn:nth-child(5n+4),
 .calc-btn:nth-child(5n) {
   background: var(--cgrey);
+}
+
+.calc-btn {
+  border: none;
+  color: var(--white);
+  border-radius: 0;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 35px;
+}
+.calc-btn:hover {
+  background: var(--agrey);
+}
+.calc-btn:active {
+  color: var(--eblue);
 }
