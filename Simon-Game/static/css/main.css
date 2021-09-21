@@ -1,0 +1,183 @@
+/* 
+  ====================
+  Reset
+  ====================
+*/
+/* 
+  http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a:link, a:visited {
+  text-decoration: none;
+}
+
+
+/* 
+  ====================
+  Colors
+  ====================
+*/
+
+:root {
+    --blue: #017aff;
+    --red: #f34971;
+    --yellow: #f5c900;
+    --green: #aabb5d;
+    --neon: #6c47ff;
+    --tan: #cdad7a;
+    --aqua: #39c0c8;
+}
+
+
+/* 
+  ====================
+  Game Figure
+  ====================
+*/
+
+#game div {
+    display: inline-grid;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 100px;
+    grid-template-columns: 2fr 1fr;
+}
+
+#game {
+    display: inline-grid;
+}
+
+
+/* 
+  ====================
+  Color Buttons
+  ====================
+*/
+
+#color-btns {
+    display: inline-grid;
+    grid-template-columns: 250px 250px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.color-btn {
+    border: none;
+    height: 250px;
+    width: 250px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+#red {
+    background: var(--red);
+    border-radius: 100% 0 0 0;
+}
+#green {
+    background: var(--green);
+    border-radius: 0 100% 0 0;
+}
+#yellow {
+    background: var(--yellow);
+    border-radius: 0 0 100% 0;
+}
+#blue {
+    background: var(--blue);
+    border-radius: 0 0 0 100%;
+}
+
+
+/* 
+  ====================
+  Info
+  ====================
+*/
+
+#info {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 35px;
+    font-family: monospace;
+    color: var(--tan);
+}
+
+#cur-score, #high-score {
+    color: var(--red);
+    opacity: 0.7;
+    font-size: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#status {
+    color: var(--aqua);
+    font-size: 50px;
+}
+
+
+/* 
+  ====================
+  Start Button
+  ====================
+*/
+
+#start {
+  background: var(--tan);
+  margin: 100px auto;
+  /* padding: 15px 60px; */
+  height: 80px;
+  width: 200px;
+  opacity: 0.8;
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
