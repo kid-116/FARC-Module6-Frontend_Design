@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FARC-M6 | Covid Stats</title>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="static/js/script.js" type="module"></script>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    </head>
+    <body>
+        <h1>Covid-19 Stats</h1>
+        <div>
+            <section id="form" class="card">
+                <form>
+                    <!-- <label for="date">Date</label>
+                    <input type="date" id="date"> -->
+                    <label for="country" class="card-title">Country</label>
+                    <select id="country">
+                    </select>
+                    <button id="submit" type="button" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+            <section>
+                <div id="error-card" class="card">
+                    <h5 class="card-header">Error</h5>
+                    <div class="card-body">
+                        <h6 class="card-title">404</h6>
+                        <p class="card-text">Not found!</p>
+                    </div>
+                </div>
+                <div id="spinner">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id="response" class="card">
+                    <div class="card-header">
+                        <h2 id="province" class="card-title"></h2>
+                        <h3 id="date" class="card-subtitle mb-2 text-muted"></h3>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">New Confirmed</h4>
+                        <p id="new-confirmed" class="card-text"></p>
+                        <h4 class="card-title">New Deaths</h4>
+                        <p id="new-deaths" class="card-text"></p>
+                        <h4 class="card-title">Total Confirmed</h4>
+                        <p id="total-confirmed" class="card-text"></p>
+                        <h4 class="card-title">Total Deaths</h4>
+                        <p id="total-deaths" class="card-text"></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>Powered by <cite>api.covid19api.com</cite></p>
+        </footer>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

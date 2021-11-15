@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    justify-content: center;
+}
+
+body > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2%;
+}
+
+#spinner {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+label, select {
+    display: block;
+}
+
+#form {
+    padding: 30px;
+    margin-bottom: 20px;
+    height: fit-content;
+}
+
+#submit {
+    margin-top: 20px;
+}
