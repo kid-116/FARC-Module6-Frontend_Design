@@ -1,6 +1,6 @@
 const submitButton = document.getElementById('submit');
 const countrySelect = document.getElementById('country');
-const responseCard = document.getElementById('response');
+const infoCard = document.getElementById('info');
 const error = document.getElementById('error-card');
 const spinner = document.getElementById('spinner');
 
@@ -14,7 +14,7 @@ const totalDeaths = document.getElementById('total-deaths');
 
 submitButton.onclick = function() {
     console.log('getting data...');
-    hide(responseCard);
+    hide(infoCard);
     hide(error);
     show(spinner);
     const country = countrySelect.value;
@@ -32,10 +32,10 @@ submitButton.onclick = function() {
                 datePara.innerHTML = date;
                 totalConfirmed.innerHTML = block.TotalConfirmed;
                 totalDeaths.innerHTML = block.TotalDeaths;
-                show(responseCard);
+                show(infoCard);
             }
         });
-        if(responseCard.style.display === 'none') {
+        if(infoCard.style.display === 'none') {
             show(error);
         }
         hide(spinner);
@@ -75,6 +75,6 @@ function show(element) {
     element.style.display = 'block';
 }
 
-hide(responseCard);
+hide(infoCard);
 hide(error);
 hide(spinner);

@@ -1,6 +1,7 @@
 body {
     display: grid;
     justify-content: center;
+    margin: 0 10vw;
 }
 
 body > div {
@@ -25,11 +26,23 @@ label, select {
 }
 
 #form {
-    padding: 30px;
-    margin-bottom: 20px;
+    padding: 15px 12px;
     height: fit-content;
+    min-width: 200px;
 }
 
 #submit {
     margin-top: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+#response {
+    padding: 0;
+}
+
+#country {
+    width: 100%;
 }
